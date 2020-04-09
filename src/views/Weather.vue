@@ -2,10 +2,10 @@
   <div>
     <b-container id="box">
       <b-card class="mb-2" style="border: none">
-        <b-card-text>
-          <h3 v-if="location">Weather in {{ location }}</h3>
-          <div v-if="error">{{ error }}</div>
-          <div v-else-if="weather.description">
+        <b-card-text style=" margin-bottom: 20px">
+          <h1 v-if="location">Weather in {{ location }}</h1>
+          <h4 v-if="error">{{ error }}</h4>
+          <h4 v-else-if="weather.description">
             {{ weather.description }}
             <br />
             Temperature: {{ weather.temperature }} &#176;C
@@ -13,7 +13,7 @@
             Humidity: {{ weather.humidity }} %
             <br />
             Pressure: {{ weather.pressure }}
-          </div>
+          </h4>
         </b-card-text>
         <b-form>
           <b-form-group id="input-group-1">
